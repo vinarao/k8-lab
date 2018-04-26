@@ -1,0 +1,10 @@
+cat rc-frontend.yaml 
+kubectl create -f rc-frontend.yml
+kubectl get pods -o wide
+sleep 5
+kubectl exec -it ubuntuapp ping <ip-of-different-frontendNP>
+sleep5
+kubectl expose rc/np-example --name=np-svc --type=NodePort
+kubectl get svc –o wide
+kubectl describe svc/np-svc
+

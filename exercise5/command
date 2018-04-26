@@ -1,0 +1,16 @@
+cat ns-dev-isolated.yaml
+cat ns-qa-isolated.yaml
+kubectl create -f ns-dev-isolated.yaml 
+kubectl create -f ns-qa-isolated.yaml
+kubectl describe ns/dev-isolated
+kubectl describe ns/qa-isolated
+kubectl get ns
+
+kubectl create -f rc-frontend-dev.yaml -n dev-isolated
+kubectl create -f rc-frontend-qa.yaml -n qa-isolated
+kubectl create -f svc-frontend-dev.yaml -n dev-isolated
+kubectl create -f svc-frontend-qa.yaml -n qa-isolated
+kubectl get pods -o wide --all-namespaces
+
+kubectl exec -it ubuntuapp wget frontend-dev-svc.dev-isolated
+kubectl exec -it ubuntuapp wget frontend-qa-svc.qa-isolated

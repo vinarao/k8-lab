@@ -1,0 +1,16 @@
+cat rc-frontend-dev.yaml 
+cat rc-frontend-qa.yaml 
+kubectl create -f rc-frontend-dev.yaml
+kubectl create -f rc-frontend-qa.yaml
+kubectl get pods -o wide 
+cat svc-frontend-dev.yaml 
+cat svc-frontend-qa.yaml 
+kubectl create -f svc-frontend-dev.yaml
+kubectl create -f svc-frontend-qa.yaml
+kubectl get svc -o wide
+
+echo " Create Ingress Load Balancer" 
+
+cat ingress-frontend.yaml 
+kubectl create -f ingress-frontend.yaml
+kubectl get ingress

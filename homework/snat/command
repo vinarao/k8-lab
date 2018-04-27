@@ -1,0 +1,13 @@
+Check the Namespace YAML
+cat namespace-isolated-snat.yaml
+
+Create a Namespace 
+kubectl apply -f namespace-isolated-snat.yaml
+
+Create a Pod in the namespce 
+kubectl apply -f ubuntu.yaml -n snat
+
+Verify traffic from the POD to the external world 
+
+kubectl -it ubuntuapp ping www.google.com
+

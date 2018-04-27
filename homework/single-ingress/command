@@ -1,0 +1,14 @@
+1> Create a POD via Replication Controller
+kubectl apply -f web-app-rc-qa.yaml
+
+2> Expose the POD's via a service 
+kubectl apply -f web-app-svc-qa.yaml 
+
+3> Create a loadbalancer ingress 
+kubectl apply -f web-app-single-service-ingress.yaml 
+
+Steps to Verification: 
+
+kubectl get pods 
+kubectl get svc 
+kubectl get ing 

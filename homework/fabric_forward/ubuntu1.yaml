@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ubuntuapp1
+  labels:
+    app: ubuntuapp
+spec:
+  containers:
+    - name: ubuntuapp
+      image: ubuntu-upstart

@@ -1,0 +1,8 @@
+kubectl apply -f kubernetes-dashboard.yaml
+ 
+check the Token created and use the token to login into the Dashboard 
+
+kubectl get secret -n kube-system | grep -i kubernetes-dashboard-token
+eg : In this case the dashboard secret is  "kubernetes-dashboard-token-dz7v9"
+
+kubectl describe secret kubernetes-dashboard-token-dz7v9 -n kube-system

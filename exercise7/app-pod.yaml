@@ -7,4 +7,4 @@ metadata:
 spec:
   containers:
     - name: ubuntu-pod
-      image: ubuntu-upstart
+      image: virtualhops/ato-ubuntu:latest

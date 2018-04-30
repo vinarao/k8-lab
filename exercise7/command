@@ -4,7 +4,7 @@ cat server-pod.yaml
 kubectl create -f server-pod.yaml
 kubectl get pods -o wide
 echo " Now test traffic" 
-sleep 300 
+sleep 30 
 echo " Now applying Policy" 
 kubectl apply –f policy.yaml
 echo "Only Port 80 traffic will work from the app towards server" 

@@ -12,5 +12,5 @@ kubectl create -f svc-frontend-dev.yaml -n dev-isolated
 kubectl create -f svc-frontend-qa.yaml -n qa-isolated
 kubectl get pods -o wide --all-namespaces
 
-kubectl exec -it ubuntuapp wget frontend-dev-svc.dev-isolated
-kubectl exec -it ubuntuapp wget frontend-qa-svc.qa-isolated
+kubectl exec -it ubuntuapp curl frontend-dev-svc.dev-isolated
+kubectl exec -it ubuntuapp curl frontend-qa-svc.qa-isolated

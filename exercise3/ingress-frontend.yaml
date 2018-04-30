@@ -4,15 +4,13 @@ metadata:
   name: name-based-ing
 spec:
   rules:
-  - host: dev.com
-    http:
+  - http:
       paths:
-      - backend:
+      - path: /dev
+        backend:
           serviceName: web-app-dev
           servicePort: 80
-  - host: qa.com
-    http:
-      paths:
-      - backend:
+      - path: /qa
+        backend:
           serviceName: web-app-qa
           servicePort: 80

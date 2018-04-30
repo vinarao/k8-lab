@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: ubuntuapp
+  name: ubuntuapp-green
   labels:
     app: ubuntuapp
 spec:
   containers:
     - name: ubuntuapp
-      image: ubuntu-upstart
+      image: virtualhops/ato-ubuntu:latest
   nodeSelector:
       color: green

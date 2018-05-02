@@ -11,7 +11,7 @@ metadata:
 spec:
   containers:
   - name: fawadshaikh
-    image: "fshaikh/sshvimallow:7.0"
+    image: "vinay4uv/demo-image:latest"
     command:
       - tailf
       - "/dev/null"

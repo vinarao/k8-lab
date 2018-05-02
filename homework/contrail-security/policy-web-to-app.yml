@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: webtoapp 
+  namespace: default
+spec:
+  podSelector:
+    matchLabels:
+      tier: App
+      deployment: Development
+  policyTypes:
+  - Ingress
+  - Egress
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          tier: Web 
+          deployment: Development

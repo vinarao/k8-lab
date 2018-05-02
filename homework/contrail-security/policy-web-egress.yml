@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: webegress
+  namespace: default
+spec:
+  podSelector:
+    matchLabels:
+      tier: Web 
+      deployment: Development
+  policyTypes:
+  - Egress
+  - Ingress
+  egress:
+  - to:
+    - podSelector:
+        matchLabels:
+          tier: App 
+          deployment: Development

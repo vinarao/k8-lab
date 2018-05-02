@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: webtoadmin 
+  namespace: default
+spec:
+  podSelector:
+    matchLabels:
+      tier: AdminAccess
+  policyTypes:
+  - Ingress
+  - Egress
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          tier: Web 

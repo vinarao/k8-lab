@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: apptodb 
+  namespace: default
+spec:
+  podSelector:
+    matchLabels:
+      tier: DB 
+      deployment: Development
+  policyTypes:
+  - Ingress
+  - Egress
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          tier: App 
+          deployment: Development

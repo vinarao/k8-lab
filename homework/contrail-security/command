@@ -1,0 +1,6 @@
+echo " run this command on Minion Node" 
+echo "docker pull vinay4uv/demo"
+echo "Load the docker image on the Minion Node" 
+echo " docker load --input demo-image.tar" 
+echo " After the image is loaded , run ./launchpods.sh" 
+echo " Login into the pod and run ./demo.sh script" 

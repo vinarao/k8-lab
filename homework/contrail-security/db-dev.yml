@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: db-dev 
+  namespace: default
+  labels:
+    deployment: Development 
+    tier: DB
+    site: China
+    app: HR-HCM 
+spec:
+  containers:
+  - name: fawadshaikh
+    image: "fshaikh/sshvimallow:7.0"
+    command:
+      - tailf
+      - "/dev/null"
+    imagePullPolicy: ""
+  restartPolicy: Always

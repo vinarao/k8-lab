@@ -1,4 +1,4 @@
-kubectl create -f rc-frontend.yml
+kubectl create -f rc-frontend.yaml
 
 echo "expose the POD via a service"
 

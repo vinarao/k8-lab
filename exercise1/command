@@ -6,8 +6,5 @@ kubectl get pods -o wide
 sleep 5
 cat ubuntu-green.yaml 
 kubectl create -f ubuntu-green.yaml
-cat ubuntu-red.yaml 
-sleep 5
-kubectl create -f ubuntu-red.yaml
 
 kubectl get pods -o wide 

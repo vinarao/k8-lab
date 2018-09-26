@@ -12,7 +12,7 @@ spec:
   - from:
     - podSelector:
         matchLabels:
-          tier: client
+          tier: prod
     ports:
     - protocol: TCP
       port: 80
